@@ -7,7 +7,7 @@ function App() {
   return (
     <Container>
       <Row>
-        <Col className="align_center align_textCenter">
+        <Col className="align_center align_textCenter title-shadow">
           <h1>Employee Registration System</h1>
         </Col>
       </Row>
@@ -117,8 +117,9 @@ function App() {
                   </Row> {/*End Row*/}
                 </Card.Text>
                 <div className="align_buttonCenter">
-                  <Button variant="primary">Register Employee</Button>
-                  <Button variant="danger">Cancel</Button>
+                  <Button className="button-size" variant="primary">Register</Button>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <Button type="reset" className="button-size" variant="danger">Cancel</Button>
                 </div>
               </Card.Body>
             </Form>
