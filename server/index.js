@@ -27,7 +27,7 @@ app.post("/api/insert", (req, res) =>{
        const job_roll = req.body.job_roll;
 
     const sqlInsert = "INSERT INTO employee(full_name,name_with_in,birth_day,age,address,city,telephone_no,email,department,job_roll)VALUES(?,?,?,?,?,?,?,?,?,?);";
-    db.query(sqlInsert, (full_name,name_with_in,birth_day,age,address,city,telephone_no,email,department,job_roll),(err, result )=>{
+    db.query(sqlInsert, [full_name,name_with_in,birth_day,age,address,city,telephone_no,email,department,job_roll],(err, result )=>{
         console.log(result);
     });
    

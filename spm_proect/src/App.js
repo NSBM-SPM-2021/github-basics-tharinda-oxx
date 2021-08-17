@@ -29,9 +29,9 @@ function App() {
         email:email ,
         department:Dep ,
         job_roll:job,
-      }).then(()=>{
-        alert("Successful Insert");
       });
+        alert("Successful Insert");
+      
     };
   return (
     <Container>
@@ -51,7 +51,7 @@ function App() {
                     <Col>
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Full Name</Form.Label>
-                        <Form.Control type="name" placeholder="Enter full name" onChange={(e)=>{
+                        <Form.Control type ="text" name="name" placeholder="Enter full name" onChange={(e)=>{
                           setName(e.target.value)
                         }} />
                         <Form.Text className="text-muted">
@@ -62,7 +62,7 @@ function App() {
                     <Col>
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Name with Initials</Form.Label>
-                        <Form.Control type="namewi" placeholder="Enter name with initials" onChange={(e)=>{
+                        <Form.Control type="text" name="namewi" placeholder="Enter name with initials" onChange={(e)=>{
                           setNamewi(e.target.value)
                         }} />
                         <Form.Text className="text-muted">
@@ -75,7 +75,7 @@ function App() {
                     <Col>
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Birth Day</Form.Label>
-                        <Form.Control type="bday" placeholder="Enter birth day" onChange={(e)=>{
+                        <Form.Control type="date" name="bday" placeholder="Enter birth day" onChange={(e)=>{
                           setBday(e.target.value)
                         }} />
                       </Form.Group>
@@ -83,7 +83,7 @@ function App() {
                     <Col>
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Age</Form.Label>
-                        <Form.Control type="age" placeholder="Enter age" onChange={(e)=>{
+                        <Form.Control type="text" name="age" placeholder="Enter age" onChange={(e)=>{
                           setAge(e.target.value)
                         }} />
                         <Form.Text className="text-muted">
@@ -96,7 +96,7 @@ function App() {
                     <Col>
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Address</Form.Label>
-                        <Form.Control type="address" placeholder="Enter address" onChange={(e)=>{
+                        <Form.Control type="text" name="address" placeholder="Enter address" onChange={(e)=>{
                           setAddress(e.target.value)
                         }}/>
                         <Form.Text className="text-muted">
@@ -107,7 +107,7 @@ function App() {
                     <Col>
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>City</Form.Label>
-                        <Form.Control type="city" placeholder="Enter city" onChange={(e)=>{
+                        <Form.Control type="text" name="city" placeholder="Enter city" onChange={(e)=>{
                           setCity(e.target.value)
                         }}/>
                         <Form.Text className="text-muted">
@@ -120,7 +120,7 @@ function App() {
                     <Col>
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Telephone No</Form.Label>
-                        <Form.Control type="tel" placeholder="Enter Telephone No" onChange={(e)=>{
+                        <Form.Control type="text" name="tel" placeholder="Enter Telephone No" onChange={(e)=>{
                           setTel(e.target.value)
                         }}/>
                         <Form.Text className="text-muted">
@@ -131,7 +131,7 @@ function App() {
                     <Col>
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email</Form.Label>
-                        <Form.Control type="email" placeholder="Enter Email" onChange={(e)=>{
+                        <Form.Control type="text" name="email" placeholder="Enter Email" onChange={(e)=>{
                           setEmail(e.target.value)
                         }} />
                         <Form.Text className="text-muted">
@@ -144,7 +144,7 @@ function App() {
                     <Col>
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Department</Form.Label>
-                        <Form.Control type="Dep" placeholder="Enter Department" onChange={(e)=>{
+                        <Form.Control type="text" name="Dep" placeholder="Enter Department" onChange={(e)=>{
                           setDep(e.target.value)
                         }}/>
                         <Form.Text className="text-muted">
@@ -155,7 +155,7 @@ function App() {
                     <Col>
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Job Roll</Form.Label>
-                        <Form.Control type="job" placeholder="Enter job roll" onChange={(e)=>{
+                        <Form.Control type="text" name="job" placeholder="Enter job roll" onChange={(e)=>{
                           setJob(e.target.value)
                         }} />
                         <Form.Text className="text-muted">
@@ -166,9 +166,9 @@ function App() {
                   </Row> {/*End Row*/}
                 </Card.Text>
                 <div className="align_buttonCenter">
-                  <Button onClick={submitReview } className="button-size" variant="primary">Register</Button>
+                  <Button onClick={submitReview} className="button-size" variant="primary">Register</Button>
                   &nbsp;&nbsp;&nbsp;&nbsp;
-                  <Button type="reset" className="button-size" variant="danger">Cancel</Button>
+                  <Button  type="reset" className="button-size" variant="danger">Cancel</Button>
                 </div>
               </Card.Body>
             </Form>
