@@ -3,7 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, Card, Button, Form } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
-
+import Axios from 'axios';
 function App() {
    
     const [name,setName] = useState("");
@@ -16,6 +16,23 @@ function App() {
     const [email,setEmail] = useState("");
     const [Dep,setDep] = useState("");
     const [job,setJob] = useState("");
+
+    const submitReview =() =>{
+      Axios.post("http://localhost:3002/api/insert",{
+        full_name:name ,
+        name_with_in:namewi ,
+        birth_day:bday ,
+        age:age ,
+        address:address ,
+        city:city , 
+        telephone_no:tel ,
+        email:email ,
+        department:Dep ,
+        job_roll:job,
+      }).then(()=>{
+        alert("Successful Insert");
+      });
+    };
   return (
     <Container>
       <Row>
@@ -149,7 +166,7 @@ function App() {
                   </Row> {/*End Row*/}
                 </Card.Text>
                 <div className="align_buttonCenter">
-                  <Button className="button-size" variant="primary">Register</Button>
+                  <Button onClick={submitReview } className="button-size" variant="primary">Register</Button>
                   &nbsp;&nbsp;&nbsp;&nbsp;
                   <Button type="reset" className="button-size" variant="danger">Cancel</Button>
                 </div>
