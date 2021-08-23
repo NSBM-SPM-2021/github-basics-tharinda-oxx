@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, Card, Button, Form, Table } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
 import Axios from 'axios';
+import dateFormat from 'dateformat';
 
 function App() {
 
@@ -203,7 +204,7 @@ function App() {
                         <tr>
                           <td>{val.full_name}</td>
                           <td>{val.name_with_in}</td>
-                          <td>{val.birth_day}</td>
+                          <td>{dateFormat(val.birth_day,"dd-mm-yyyy")}</td>
                           <td>{val.age}</td>
                           <td>{val.address}</td>
                           <td>{val.city}</td>
