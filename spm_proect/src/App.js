@@ -169,6 +169,8 @@ function App() {
                   <Button onClick={submitReview} className="button-size" variant="primary">Register</Button>
                   &nbsp;&nbsp;&nbsp;&nbsp;
                   <Button  type="reset" className="button-size" variant="danger">Cancel</Button>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <Button className="button-size" variant="secondary">View</Button>
                 </div>
               </Card.Body>
             </Form>
