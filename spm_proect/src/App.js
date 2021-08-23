@@ -50,7 +50,7 @@ function App() {
         </Col>
       </Row>
       <Row>
-        <Col lg="11" className="align_center">
+        <Col lg="12" className="align_center">
           <Card style={{ width: '100%' }}>
             <Form>
               <Card.Body>
@@ -202,15 +202,15 @@ function App() {
                       <tbody>
                         <tr>
                           <td>{val.full_name}</td>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
-                          <td>1</td>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
-                          <td>@mdo</td>
+                          <td>{val.name_with_in}</td>
+                          <td>{val.birth_day}</td>
+                          <td>{val.age}</td>
+                          <td>{val.address}</td>
+                          <td>{val.city}</td>
+                          <td>{val.telephone_no}</td>
+                          <td>{val.email}</td>
+                          <td>{val.department}</td>
+                          <td>{val.job_roll}</td>
                         </tr>
                       </tbody>
                     );
