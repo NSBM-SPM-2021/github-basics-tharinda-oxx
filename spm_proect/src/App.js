@@ -5,6 +5,7 @@ import { Container, Row, Col, Card, Button, Form, Table } from 'react-bootstrap'
 import { useState, useEffect } from 'react';
 import Axios from 'axios';
 import dateFormat from 'dateformat';
+import { RiDeleteBin6Fill } from 'react-icons/ri';
 
 function App() {
 
@@ -42,6 +43,10 @@ function App() {
     });
     alert("Successful Insert");
 
+  };
+  const deleteEmployee = (EmployeeId) => {
+    Axios.delete(`http://localhost:3002/api/delete/${EmployeeId}`);
+    alert("Delete successfully");
   };
   return (
     <Container>
@@ -198,6 +203,7 @@ function App() {
                       <th>Email</th>
                       <th>Department</th>
                       <th>Job Roll</th>
+                      <th>Action</th>
                     </tr>
                   </thead>
                   {employeeList.map((val) => {
@@ -214,6 +220,9 @@ function App() {
                           <td>{val.email}</td>
                           <td>{val.department}</td>
                           <td>{val.job_roll}</td>
+                          <td>
+                          <Button onClick={()=>{deleteEmployee(val.id)}}  variant="danger"><RiDeleteBin6Fill/></Button>
+                          </td>
                         </tr>
                       </tbody>
                     );

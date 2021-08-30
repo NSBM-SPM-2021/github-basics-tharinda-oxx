@@ -41,6 +41,13 @@ app.post("/api/insert", (req, res) =>{
     });
    
 });
+app.delete('/api/delete/:id',(req,res)=>{
+    const deleteEmployee = req.params.id;
+    const sqlDelete = "DELETE FROM employee WHERE id=?;";
+    db.query(sqlDelete,deleteEmployee,(err,result) => {
+             if (err) console.log(err);
+    });
+});
 
 app.listen(3002,() => {
     console.log("Running on port 3002");
