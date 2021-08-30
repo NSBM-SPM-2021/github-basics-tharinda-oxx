@@ -41,12 +41,15 @@ function App() {
       department: Dep,
       job_roll: job,
     });
-    alert("Successful Insert");
+    alert("Successfully Inserted");
+    window.location.reload(true);
 
   };
   const deleteEmployee = (EmployeeId) => {
     Axios.delete(`http://localhost:3002/api/delete/${EmployeeId}`);
-    alert("Delete successfully");
+    alert("Successfully Deleted");
+    window.location.reload(true);
+
   };
   return (
     <Container>
