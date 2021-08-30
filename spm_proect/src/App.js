@@ -125,7 +125,7 @@ function App() {
                         </Form.Text>
                       </Form.Group>
                     </Col>
-                  </Row> {/*End Row*/}
+                  </Row> 
                   <Row>
                     <Col>
                       <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -149,7 +149,7 @@ function App() {
                         </Form.Text>
                       </Form.Group>
                     </Col>
-                  </Row> {/*End Row*/}
+                  </Row> 
                   <Row>
                     <Col>
                       <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -173,12 +173,14 @@ function App() {
                         </Form.Text>
                       </Form.Group>
                     </Col>
-                  </Row> {/*End Row*/}
+                  </Row> 
+                      
                 </Card.Text>
+                      
                 <div className="align_buttonCenter">
                   <Button onClick={submitReview} className="button-size" variant="primary">Register</Button>
                   &nbsp;&nbsp;&nbsp;&nbsp;
-                  <Button type="reset" className="button-size" variant="danger">Cancel</Button>
+                  <Button type="reset" className="button-size" variant="danger">Clear</Button>
                 </div>
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <Card.Title>Employee Details</Card.Title>
@@ -217,7 +219,6 @@ function App() {
                     );
                   })}
                 </Table>
-
               </Card.Body>
             </Form>
           </Card>
