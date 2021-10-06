@@ -69,7 +69,7 @@ function App() {
                     <Col>
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Full Name</Form.Label>
-                        <Form.Control type="text" name="name" placeholder="Enter full name" onChange={(e) => {
+                        <Form.Control type="text" name="name" placeholder="Enter full name" data-testid ="full_name" onChange={(e) => {
                           setName(e.target.value)
                         }} />
                         <Form.Text className="text-muted">
@@ -138,7 +138,7 @@ function App() {
                     <Col>
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Telephone No</Form.Label>
-                        <Form.Control type="text" name="tel" placeholder="Enter Telephone No" onChange={(e) => {
+                        <Form.Control type="number" name="tel" placeholder="Enter Telephone No" data-testid ="tel" onChange={(e) => {
                           setTel(e.target.value)
                         }} />
                         <Form.Text className="text-muted">
@@ -149,7 +149,7 @@ function App() {
                     <Col>
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email</Form.Label>
-                        <Form.Control type="text" name="email" placeholder="Enter Email" onChange={(e) => {
+                        <Form.Control type="email" name="email" placeholder="Enter Email" data-testid ="email"  onChange={(e) => {
                           setEmail(e.target.value)
                         }} />
                         <Form.Text className="text-muted">
