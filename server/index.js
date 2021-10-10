@@ -4,11 +4,14 @@ const cors = require("cors");
 const app = express();
 const mysql = require("mysql");
 
+// const PORT = 3001;
+//mysql://badf5e6df2fcc4:b44c889f@us-cdbr-east-04.cleardb.com/heroku_1bf1269564d07e5?reconnect=true
+
 const db = mysql.createPool({
-     host:"localhost",
-     user:"root",
-     password:"admin",
-     database:"employee_system"
+     host:"us-cdbr-east-04.cleardb.com",
+     user:"badf5e6df2fcc4",
+     password:"b44c889f",
+     database:"heroku_1bf1269564d07e5"
 });
     app.use(cors());
     app.use(express.json());
@@ -49,6 +52,11 @@ app.delete('/api/delete/:id',(req,res)=>{
     });
 });
 
-app.listen(3002,() => {
-    console.log("Running on port 3002");
+//server
+app.listen(3001, () => {
+    console.log("running on port 3001");
 });
+
+// app.listen(process.env.PORT || PORT, () => {
+//     console.log(`running on port ${PORT}`);
+// });
