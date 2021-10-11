@@ -58,5 +58,5 @@ app.delete('/api/delete/:id',(req,res)=>{
 //});
 
 app.listen(process.env.PORT || 3000, () => {
-     console.log(`running on port ${PORT}`);
+     console.log(`running on port 3000`);
 });
