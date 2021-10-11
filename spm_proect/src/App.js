@@ -23,13 +23,13 @@ function App() {
   const [employeeList, setEmployeeList] = useState([]);
 
   useEffect(() => {
-    Axios.get("http://localhost:3002/api/get").then((response) => {
+    Axios.get("http://localhost:3001/api/get").then((response) => {//https://nsbm-smp-project.herokuapp.com/
       setEmployeeList(response.data);
     });
   }, []);
 
   const submitReview = () => {
-    Axios.post("http://localhost:3002/api/insert", {
+    Axios.post("http://localhost:3001/api/insert", {//https://nsbm-smp-project.herokuapp.com
       full_name: name,
       name_with_in: namewi,
       birth_day: bday,
@@ -46,7 +46,7 @@ function App() {
 
   };
   const deleteEmployee = (EmployeeId) => {
-    Axios.delete(`http://localhost:3002/api/delete/${EmployeeId}`);
+    Axios.delete(`http://localhost:3001/api/delete/${EmployeeId}`);//https://nsbm-smp-project.herokuapp.com
     alert("Successfully Deleted");
     window.location.reload(true);
 
