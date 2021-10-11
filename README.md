@@ -6,7 +6,7 @@ Employee Registration System Web Application developed with React and Mysql. The
 Link to Trello board : https://trello.com/b/BGfFkO1d/spm-project
 
 ## Project Management
-Link to the Website :https://frosty-swartz-90f3ed.netlify.app
+Link to the Website :https://ersystem.netlify.app
 
 ## Technology Stack
 - ReactJS
