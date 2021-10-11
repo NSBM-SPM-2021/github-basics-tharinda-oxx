@@ -5,13 +5,13 @@ const app = express();
 const mysql = require("mysql");
 
 // const PORT = 3001;
-//mysql://badf5e6df2fcc4:b44c889f@us-cdbr-east-04.cleardb.com/heroku_1bf1269564d07e5?reconnect=true
+//mysql://ba5cf147c42cfe:7375c510@eu-cdbr-west-01.cleardb.com/heroku_287490302195aba?reconnect=true
 
 const db = mysql.createPool({
-     host:"us-cdbr-east-04.cleardb.com",
-     user:"badf5e6df2fcc4",
-     password:"b44c889f",
-     database:"heroku_1bf1269564d07e5"
+     host:"eu-cdbr-west-01.cleardb.com",
+     user:"ba5cf147c42cfe",
+     password:"7375c510",
+     database:"heroku_287490302195aba"
 });
     app.use(cors());
     app.use(express.json());
