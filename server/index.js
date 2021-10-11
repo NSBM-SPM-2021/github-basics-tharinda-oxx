@@ -1,5 +1,5 @@
 const express = require("express");
-const bodyParser = require("body-parser")
+const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express();
 const mysql = require("mysql");
@@ -53,8 +53,8 @@ app.delete('/api/delete/:id',(req,res)=>{
 });
 
 //server
-app.listen(3001, () => {
-    console.log("running on port 3001");
+app.listen(3000, () => {
+    console.log("running on port 3000");
 });
 
 // app.listen(process.env.PORT || PORT, () => {
