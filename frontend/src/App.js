@@ -40,15 +40,24 @@ function App() {
       email: email,
       department: Dep,
       job_roll: job,
+    }).then(value=>{
+      console.log(value);
+      alert("Successfully Inserted");
+    }).catch(err =>{
+      console.log(err);
     });
-    alert("Successfully Inserted");
-    window.location.reload(true);
+    
+    //window.location.reload(true);
 
   };
   const deleteEmployee = (EmployeeId) => {
-    Axios.delete(`https://ers-project.herokuapp.com/api/delete/${EmployeeId}`);
-    alert("Successfully Deleted");
-    window.location.reload(true);
+    Axios.delete(`https://ers-project.herokuapp.com/api/delete/${EmployeeId}`).then(value=>{
+      console.log(value);
+      alert("Successfully Inserted");
+    }).catch(err=>{
+      console.log(err);
+    });
+    
 
   };
   return (
