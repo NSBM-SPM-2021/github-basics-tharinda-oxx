@@ -53,13 +53,12 @@ function App() {
   const deleteEmployee = (EmployeeId) => {
     Axios.delete(`https://ers-project.herokuapp.com/api/delete/${EmployeeId}`).then(value=>{
       console.log(value);
-      alert("Successfully Inserted");
+      alert("Successfully Deleted");
     }).catch(err=>{
       console.log(err);
     });
-    
-
   };
+
   return (
     <Container>
       <Row>
